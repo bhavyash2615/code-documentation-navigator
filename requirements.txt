@@ -1,4 +1,4 @@
-flask==2.3.4
-grokai==1.0.1
-requests==2.31.0
-python-dotenv==1.0.0
+flask
+grokai
+requests
+python-dotenv
