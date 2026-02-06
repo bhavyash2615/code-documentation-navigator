@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Documentation Navigator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== -->
+    <!-- HERO / TOOL SECTION -->
+    <!-- ===================== -->
+
+    <div class="page">
+
+        <h1 class="title">Code Documentation Navigator</h1>
+        <h3 class="subtitle">Turn Python code into human-readable documentation</h3>
+        <p class="ai-badge"> AI-Powered Code Analysis & Documentation</p>
+
+
+        <div class="tool-grid">
+
+            <!-- LEFT: INPUT -->
+            <div class="card">
+                <h2 class="section-heading">Enter Your Python Code</h2>
+                <p class="helper-text">Paste any function, class, or script you want to understand.</p>
+                <textarea id="code" placeholder="Paste your code here..."></textarea>
+
+                <h2 class="section-heading">What would you like to know?</h2>
+                <p class="helper-text">Ask about logic, flow, purpose, or behavior.</p>
+                <input id="question" placeholder="Eg: Explain what this function does..." />
+
+                <button onclick="sendCode()">Analyze Code</button>
+            </div>
+
+            <!-- RIGHT: OUTPUT -->
+            <div class="card">
+                <h2 class="section-heading">Analysis Result</h2>
+                <p class="helper-text">AI-generated explanation will appear below.</p>
+                <pre id="output">The explanation will appear here...</pre>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===================== -->
+    <!-- WHY USE SECTION -->
+    <!-- ===================== -->
+
+    <section class="info-section">
+
+        <h2 class="info-title">Why use Code Documentation Navigator?</h2>
+        <p class="info-subtitle">
+            Understanding code shouldn’t be time-consuming or confusing.
+            This tool helps you instantly convert complex code into clear explanations.
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>🚀 Save Time</h3>
+                <p>Quickly understand unfamiliar or legacy code without reading every line.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📚 Better Documentation</h3>
+                <p>Generate clear explanations that help with learning and maintaining code.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🧠 AI-Powered Insights</h3>
+                <p>Get human-like explanations powered by large language models.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>👩‍💻 Developer Friendly</h3>
+                <p>Designed for students, developers, and teams working with Python code.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== -->
+    <!-- HOW IT WORKS SECTION -->
+    <!-- ===================== -->
+
+    <section class="info-section light">
+
+        <h2 class="info-title">How it works</h2>
+
+        <div class="steps">
+            <div class="step">1️⃣ Paste your Python code into the editor</div>
+            <div class="step">2️⃣ Ask a question about what you want to understand</div>
+            <div class="step">3️⃣ AI analyzes the code and its logic</div>
+            <div class="step">4️⃣ Get a clear, readable explanation instantly</div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer class="footer">
+    <h3 class="footer-title">Code Documentation Navigator</h3>
+    <p class="footer-tagline">
+        AI-powered code insights that help developers understand, document, and improve code faster.
+    </p>
+
+    <p class="footer-meta">
+        © 2026 Code Documentation Navigator • Powered by AI<br>
+        Made by <strong>BHAVYA SHARMA</strong> • All rights reserved
+    </p>
+</footer>
+</body>
+</html>
