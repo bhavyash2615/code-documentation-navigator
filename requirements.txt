@@ -1,3 +1,4 @@
 flask
 grokai
 requests
+python-dotnv
