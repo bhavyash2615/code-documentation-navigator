@@ -1,4 +1,3 @@
 flask
-grokai
 requests
 python-dotenv
