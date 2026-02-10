@@ -52,7 +52,7 @@ http://localhost:5000
 
 ## 🌍 Live Demo
 🔗 Live Website:
-https://code-documentation-navigator.onrender.com
+https://code-doc-navigator.netlify.app/
 
 ## 🎯 Why This Project?
 Understanding large codebases can be challenging, especially for new developers. This project demonstrates how RAG and LLMs can make code documentation more accessible by providing contextual, conversational explanations.
