@@ -14,9 +14,8 @@ ScaleDown is off by default and can be enabled only when needed.
 Responses include headings, clarity, and examples when helpful.
 - 📱 Responsive & Modern UI
 Works smoothly on desktop and mobile screens.
-- More Interesting Features
-Simple and clean web interface
-Beginner-friendly, scalable design
+- More Interesting Features:
+Simple and clean web interface and Beginner-friendly, scalable design
   
 ## 🛠 Tech Stack
 - Frontend: HTML, CSS, JavaScript
