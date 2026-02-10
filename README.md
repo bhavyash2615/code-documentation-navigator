@@ -33,21 +33,21 @@ Simple and clean web interface and Beginner-friendly, scalable design
 - The response is displayed on the web interface.
 
 ## 📦 Installation & Setup
-1. Clone the repository:
-git clone https://github.com/your-username/code-documentation-navigator.git
+1. Clone the repository:<br>
+git clone https://github.com/your-username/code-documentation-navigator.git<br>
 cd code-documentation-navigator
-2. Create and activate a virtual environment:
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-3. Install dependencies:
+2. Create and activate a virtual environment:<br>
+python -m venv venv<br>
+source venv/bin/activate<br>   # On Windows: venv\Scripts\activate
+3. Install dependencies:<br>
 pip install -r requirements.txt
-4. Set up environment variables (if required):
-SCALEDOWN_API_KEY=your_scaledown_api_key
+4. Set up environment variables (if required):<br>
+SCALEDOWN_API_KEY=your_scaledown_api_key<br>
 LLM_API_KEY=your_llm_api_key
 
 ## ▶️ Running the Application
 python app.py
-- Then open your browser and navigate to:
+- Then open your browser and navigate to:<br>
 http://localhost:5000
 
 ## 🌍 Live Demo
