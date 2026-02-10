@@ -2,19 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Documentation Navigator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="header">
+    <div class="nav-container">
+        <div class="logo">Code Documentation Navigator</div>
+
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how">How</a>
+            <a href="#scaledown">ScaleDown</a>
+        </nav>
+    </div>
+    </header>
+
+    <div class="top-bar">
+    ⚡ From source code to clear understanding — powered by AI
+    </div>
 
     <!-- ===================== -->
     <!-- HERO / TOOL SECTION -->
     <!-- ===================== -->
 
-    <div class="page">
+    <div class="page app-container">
 
-        <h1 class="title">Code Documentation Navigator</h1>
-        <h3 class="subtitle">Turn Python code into human-readable documentation</h3>
+        <!-- <h1 class="title">Code Documentation Navigator</h1> -->
+        <h1 class="title">
+            Understand Your Code <br>
+            <span>Like Never Before</span>
+        </h1>
+
+        <h3 class="subtitle">AI-powered documentation and code analysis that turns logic into clarity</h3>
+
         <p class="ai-badge"> AI-Powered Code Analysis & Documentation</p>
 
 
@@ -22,22 +47,50 @@
 
             <!-- LEFT: INPUT -->
             <div class="card">
-                <h2 class="section-heading">Enter Your Python Code</h2>
-                <p class="helper-text">Paste any function, class, or script you want to understand.</p>
-                <textarea id="code" placeholder="Paste your code here..."></textarea>
+                <h2 class="section-heading">Select Language</h2>
+                <select id="language">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="typescript">TypeScript</option>
+                    <option value="java">Java</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="go">Go</option>
+                    <option value="rust">Rust</option>
+                </select>
+                <h2 class="section-heading">Enter Your Code</h2>
 
+                <p class="helper-text">Paste any function, class, or script you want to understand.</p>
+                <p class="helper-text">First request may take longer due to server warm-up.</p>
+                <textarea id="code" placeholder="Paste your code here..."></textarea>
                 <h2 class="section-heading">What would you like to know?</h2>
                 <p class="helper-text">Ask about logic, flow, purpose, or behavior.</p>
                 <input id="question" placeholder="Eg: Explain what this function does..." />
+                <!-- Compression Toggle -->
+                <div class="compression-box">
+                    <div class="compression-header">
+                        <label class="switch">
+                            <input type="checkbox" id="compressionToggle">
+                            <span class="slider"></span>
+                        </label>
+                        <div class="compression-text">
+                            <strong>Enable Smart Compression</strong>
+                            <p>Optimize large code by reducing token usage before AI analysis.</p>
+                        </div>
+                    </div>
+                </div>
 
                 <button onclick="sendCode()">Analyze Code</button>
+                <button class="secondary-btn" onclick="clearAll()">Clear All</button>
             </div>
 
             <!-- RIGHT: OUTPUT -->
             <div class="card">
                 <h2 class="section-heading">Analysis Result</h2>
                 <p class="helper-text">AI-generated explanation will appear below.</p>
-                <pre id="output">The explanation will appear here...</pre>
+                <pre id="output" class="output-box">Waiting for analysis...</pre>
+                <button class="secondary-btn" onclick="copyOutput()"> Copy Explanation</button>
+
             </div>
 
         </div>
@@ -47,7 +100,7 @@
     <!-- WHY USE SECTION -->
     <!-- ===================== -->
 
-    <section class="info-section">
+    <section class="info-section" id="features">
 
         <h2 class="info-title">Why use Code Documentation Navigator?</h2>
         <p class="info-subtitle">
@@ -74,7 +127,7 @@
 
             <div class="feature-card">
                 <h3>👩‍💻 Developer Friendly</h3>
-                <p>Designed for students, developers, and teams working with Python code.</p>
+                <p>Designed for students, developers, and teams working with multi-language codebases.</p>
             </div>
 
         </div>
@@ -84,18 +137,97 @@
     <!-- HOW IT WORKS SECTION -->
     <!-- ===================== -->
 
-    <section class="info-section light">
+    <!-- <section class="info-section light" id="how">
 
         <h2 class="info-title">How it works</h2>
 
         <div class="steps">
-            <div class="step">1️⃣ Paste your Python code into the editor</div>
-            <div class="step">2️⃣ Ask a question about what you want to understand</div>
-            <div class="step">3️⃣ AI analyzes the code and its logic</div>
-            <div class="step">4️⃣ Get a clear, readable explanation instantly</div>
+            <div class="step">
+                <strong>1️⃣ Paste your code</strong><br>
+                Upload any function, class, or script you want to understand.
+            </div>
+
+            <div class="step">
+                <strong>2️⃣ Ask your question</strong><br>
+                Ask about logic, purpose, flow, edge cases, or behavior.
+            </div>
+
+            <div class="step">
+                <strong>3️⃣ AI analyzes deeply</strong><br>
+                The system examines syntax, structure, and intent behind the code.
+            </div>
+
+            <div class="step">
+                <strong>4️⃣ Get clear explanations</strong><br>
+                Receive structured, human-readable explanations in seconds.
+            </div>
+        </div>
+
+    </section> -->
+    <section class="info-section light" id="how">
+
+        <h2 class="info-title">How it works</h2>
+
+        <div class="how-grid">
+
+            <div class="how-card">
+                <span class="how-step">1</span>
+                <h3>Paste your code</h3>
+                <p>
+                    Paste any function, class, or script you want to understand.
+                </p>
+            </div>
+
+            <div class="how-card">
+                <span class="how-step">2</span>
+                <h3>Ask your question</h3>
+                <p>
+                    Ask about logic, flow, purpose, or behavior in your own words.
+                </p>
+            </div>
+
+            <div class="how-card">
+                <span class="how-step">3</span>
+                <h3>AI analyzes deeply</h3>
+                <p>
+                    The AI examines structure, syntax, and intent behind the code.
+                </p>
+            </div>
+
+            <div class="how-card">
+                <span class="how-step">4</span>
+                <h3>Get clear explanations</h3>
+                <p>
+                    Receive structured, human-readable explanations instantly.
+                </p>
+            </div>
+
         </div>
 
     </section>
+
+    <!-- ===================== -->
+    <!-- CONTEXT OPTIMIZATION -->
+    <!-- ===================== -->
+
+    <section class="info-section scaledown-section" id="scaledown">
+        <h2 class="info-title">Cut the tokens, not the logic</h2>
+        <div class="scaledown-card">
+            <h3 class="scaledown-title">Smart Context Optimization</h3>
+
+            <p class="scaledown-text">
+                For large codebases, this tool can optionally compress code using
+                <strong>ScaleDown</strong> before analysis.
+                This reduces unnecessary tokens while preserving structure and intent,
+                enabling faster responses and more efficient AI processing.
+            </p>
+
+            <p class="scaledown-note">
+                Compression is applied only when enabled by the user.
+            </p>
+        </div>
+    </section>
+
 
     <script src="script.js"></script>
 
@@ -107,6 +239,7 @@
 
     <p class="footer-meta">
         © 2026 Code Documentation Navigator • Powered by AI<br>
+        Context optimization powered by <strong>ScaleDown</strong><br>
         Made by <strong>BHAVYA SHARMA</strong> • All rights reserved
     </p>
 </footer>
