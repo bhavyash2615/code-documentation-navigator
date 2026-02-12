@@ -12,8 +12,8 @@ Make sure you have the following installed:
 - Python 3.9 or higher
 - Git
 - A code editor (VS Code recommended)
-- A Groq API key (Get one here)
-- A ScaleDown API key (optional but recommended) (Get one here)
+- A Groq API key [(Get one here)](https://console.groq.com/keys)
+- A ScaleDown API key (optional but recommended) [(Get one here)](https://scaledown.ai/auth)
 
 Verify Python installation:
 ```bash
